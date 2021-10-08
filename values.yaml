@@ -80,6 +80,7 @@ tolerations: []
 
 affinity: {}
 
+###############################################################################
 # Elasticsearch can be used for indexing. To avoid using it, set
 # elasticsearch.eck.enabled and elasticsearch.external.enabled both to
 # false.
@@ -151,6 +152,7 @@ attachmentStorage:
     storageClass: ""
     size: 10Gi
 
+###############################################################################
 # Local database storage is used if Cassandra is not enabled.
 #
 # This does not matter for TheHive 3.
@@ -169,6 +171,7 @@ localIndexStorage:
     storageClass: ""
     size: 10Gi
 
+###############################################################################
 # Cassandra is the usual primary data store for TheHive 4. Settings in
 # this section are for the Cassandra Helm chart. For external
 # Cassandra databases, set cassandra.enabled to false, and see
@@ -202,6 +205,7 @@ cassandra:
       #   - hostname/IP
       #   - hostname/IP
 
+###############################################################################
 # Setup for an external Cassandra (or ScyllaDB) cluster.
 externalCassandra:
   # Set this to true if you have a Cassandra instance outside the
@@ -221,6 +225,7 @@ externalCassandra:
     # nonempty, even if Cassandra isn't configured to require one.
     password: ""
 
+###############################################################################
 # Provide extra pieces of TheHive configuration in this map. Keys will
 # be used as filenames; values as the contents of the respective
 # files. An include directive for each file given here will be written

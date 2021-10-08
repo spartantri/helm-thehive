@@ -17,3 +17,6 @@ dependencies:
     version: ~7.5.0
     repository: https://charts.bitnami.com/bitnami
     condition: cassandra.enabled
+  # - name: cortex
+  #   version: ~4.1.4-1
+    # condition: cortex.enabled
