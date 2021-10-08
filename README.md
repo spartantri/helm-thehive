@@ -10,6 +10,8 @@ It's early days, but if you want to try it out, clone this repository,
 cd into it, and
 
 ```
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm dependency update
 helm install my-thehive .
 ```
 
@@ -26,7 +28,8 @@ Helm 3.5.2, this does the trick for me:
 helm install -n thehive my-thehive . \
              --set storageClass=local-path \
              --set 'ingress.hosts[0].host=hive.k.my.dns.domain' \
-             --set 'ingress.hosts[0].paths[0].path=/'
+             --set 'ingress.hosts[0].paths[0].path=/' \
+             --create-namespace
 ```
 
 Defaults are for local index storage, local database storage, and
